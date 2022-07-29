@@ -1570,3 +1570,26 @@ indent = { tab-width = 2, unit = "  " }
 [[grammar]]
 name = "ungrammar"
 source = { git = "https://github.com/Philipp-M/tree-sitter-ungrammar", rev = "0113de880a58ea14f2a75802e9b99fcc25003d9c" }
+
+[[language]]
+name = "nasl"
+scope = "source.nasl"
+injection-regex = "nasl"
+file-types = ["nasl", "inc"]
+roots = ["plugin_feed_info.inc"]
+auto-format = true
+comment-token = "#"
+language-server = { command = "nasl-analyzer" }
+indent = { tab-width = 4, unit = "    " }
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+
+[[grammar]]
+name = "nasl"
+source = { git = "https://github.com/nichtsfrei/tree-sitter-nasl", rev = "bf84c55267f1a7b9fc10a9b3932b7e2d31e98863"}
+
